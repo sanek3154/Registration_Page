@@ -1,5 +1,5 @@
 <script src="https://unpkg.com/imask"></script>
-<form style="margin-left: 40%"><h1>Регистрация</h1>
+<!--form style="margin-left: 40%"><h1>Регистрация</h1-->
                 <p><label>Имя</label>
                   <p> <input [(ngModel)]="name"  onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  "/></p>
                  <p> <label>Фамилия</label></p>
@@ -19,4 +19,4 @@
                  <p><input [(ngModel)]="password" type="password" onkeyup="this.value=this.value.replace(/\s+/,'')  " /></p>
                  <p><button (click)="registeration()">Регистрация</button></p>
 
-                 </form>
+                 <!--/form-->

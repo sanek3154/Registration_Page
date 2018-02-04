@@ -16,7 +16,6 @@ export class AppComponent {
     passport='';
     login='';
     password='';
-    c=0;
     secondpath='';
     registeration(): void{
         if ((this.name!='')&&(this.surname!='')&&(this.birthDay!='')
@@ -26,7 +25,7 @@ export class AppComponent {
             if (this.password.length>10){
             if (localStorage.getItem(this.login)==null)
             {
-                this.secondpath=(this.password+":"+this.birthDay+":"+this.name+":"+this.surname+":"+this.patronymic+":"+this.passport).toString();
+                this.secondpath=(this.name+":"+this.surname+":"+this.patronymic+":"+this.birthDay+":"+this.passport+":"+this.password).toString();
                // this.name=this.secondpath;
                 localStorage.setItem(this.login,this.secondpath);            
             }
@@ -38,8 +37,9 @@ export class AppComponent {
         }else {
             alert("Все поля обязательны для заполнения");
         }
-        //localStorage.setItem(this.name,this.c.toString());
-        this.c++;
+
+        
+
         console.log(this.surname);
         console.log(this.name);
         console.log(this.birthDay);
@@ -47,7 +47,7 @@ export class AppComponent {
         console.log(this.password);
         console.log(this.passport);
         console.log(this.secondpath);
-        console.log(this.c);
+
     }
 
 }
