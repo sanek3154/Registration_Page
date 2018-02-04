@@ -1,20 +1,22 @@
 <script src="https://unpkg.com/imask"></script>
-<h1>Регистрация</h1>
+<form style="margin-left: 40%"><h1>Регистрация</h1>
                 <p><label>Имя</label>
-                 <input [(ngModel)]="name"  onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  "/></p>
-                 <p> <label>Фамилия</label>
-                 <input [(ngModel)]="surname" onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  " /></p>
-                 <p><label>Отчество</label>
-                 <input [(ngModel)]="patronymic" onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  "/></p>
-                 <p><label>Дата рождения</label>
-                 <input [(ngModel)]="birthDay" type="date" /></p>
-                 <p><label>Номер паспорта</label>
-                 <input [(ngModel)]="passport"
+                  <p> <input [(ngModel)]="name"  onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  "/></p>
+                 <p> <label>Фамилия</label></p>
+                 <p><input [(ngModel)]="surname" onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  " /></p>
+                 <p><label>Отчество</label></p>
+                 <p><input [(ngModel)]="patronymic" onkeyup="this.value=this.value.replace(/\s+/,'').replace(/\d+/,'')  "/></p>
+                 <p><label>Дата рождения</label></p>
+                 <p><input [(ngModel)]="birthDay" type="date" /></p>
+                 <p><label>Номер паспорта</label></p>
+                 <p><input [(ngModel)]="passport"
                     placeholder="NN NN NNNNNN"
                   [textMask]="{mask:mask}"  /></p>
                  
-                 <p><label>Логин</label>
-                 <input [(ngModel)]="login" onkeyup="{var reg = /[а-яА-ЯёЁ]/g; this.value=this.value.replace(/\s+/,'').replace(reg,'');}  " /></p>
-                 <p><label>Пароль</label>
-                 <input [(ngModel)]="password" type="password" onkeyup="this.value=this.value.replace(/\s+/,'')  " /></p>
+                 <p><label>Логин</label></p>
+                 <p><input [(ngModel)]="login" onkeyup="{var reg = /[а-яА-ЯёЁ]/g; this.value=this.value.replace(/\s+/,'').replace(reg,'');}  " /></p>
+                 <p><label>Пароль</label></p>
+                 <p><input [(ngModel)]="password" type="password" onkeyup="this.value=this.value.replace(/\s+/,'')  " /></p>
                  <p><button (click)="registeration()">Регистрация</button></p>
+
+                 </form>
